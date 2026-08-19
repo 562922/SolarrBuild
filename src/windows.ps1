@@ -1,55 +1,9 @@
 #requires -Version 5.1
-<#
-===============================================================================
- AUTOMATED WINDOWS MEDIA SERVER
-
- Installs:
-   - Docker Desktop
-   - Jellyfin
-   - Seerr
-   - qBittorrent
-   - Prowlarr
-   - Sonarr
-   - Radarr
-   - Tailscale
-
- Automatically configures:
-   - Persistent Docker Compose stack
-   - Media directories
-   - Download directories
-   - Sonarr API key
-   - Radarr API key
-   - Prowlarr API key
-   - Sonarr -> qBittorrent
-   - Radarr -> qBittorrent
-   - Prowlarr -> Sonarr
-   - Prowlarr -> Radarr
-   - Sonarr TV root folder
-   - Radarr movie root folder
-   - qBittorrent download directories
-   - Tailscale
-
- Prompts:
-   - Media directory
-   - Config directory
-   - Username
-   - Password
-   - Optional Tailscale auth key
-
- NOTE:
-   Seerr's owner initialization/authentication is intentionally not
-   performed by modifying its database. The installer starts Seerr and
-   opens its setup page. After Jellyfin authentication, the supported
-   Seerr APIs can be used for further automation.
-
- Run:
-   Set-ExecutionPolicy -Scope Process Bypass
-   .\install-media-stack.ps1
-
- Optional:
-   .\install-media-stack.ps1 -TailscaleAuthKey "tskey-auth-..."
-===============================================================================
-#>
+# ============================================================
+# Universal Media Server Installer - Windows
+# Installs/configures:
+# Jellyfin, Seerr, qBittorrent, Prowlarr, Sonarr, Radarr, Tailscale
+# ============================================================
 
 $ErrorActionPreference = "Stop"
 
